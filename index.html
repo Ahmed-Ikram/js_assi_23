@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Signup Form</title>
+</head>
+<body>
+
+    <div class="container">
+        <form id="signupForm" onsubmit="submitForm(event)">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <hr> <br><br><br>
+
+    <div class="container2">
+        <div class="item">
+            <h2>Item Title</h2>
+            <p class="short-description"> Only a few details are visible initially. if you want to see full description then please click on the button given below</p>
+            <p class="full-description hidden">This is the full description of the item. It contains all the details that the user can view after clicking "Read more".</p>
+            <button class="read-more-btn" onclick="toggleDescription(this)">Read more</button>
+        </div>
+    </div>
+
+    <hr>
+    <br><br><br><br>
+  
+
+    <div class="container3">
+        <h2>Student Details</h2>
+        <form id="studentForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="grade">Grade:</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <button type="button" onclick="addStudent()">Add Student</button>
+        </form>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Student details will be dynamically added here -->
+            </tbody>
+        </table>
+
+        <div id="editForm" class="hidden2">
+            <h2>Edit Student</h2>
+            <form id="editStudentForm">
+                <label for="editName">Name:</label>
+                <input type="text" id="editName" name="editName" required>
+
+                <label for="editAge">Age:</label>
+                <input type="number" id="editAge" name="editAge" required>
+
+                <label for="editGrade">Grade:</label>
+                <input type="text" id="editGrade" name="editGrade" required>
+
+                <button type="button" onclick="saveEdit()">Save Edit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
